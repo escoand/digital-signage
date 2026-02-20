@@ -8,7 +8,7 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "^\\.babelrc\\.json$"
+        ".babelrc.json"
       ],
       "matchStrings": [
         "\"corejs\":\\s*\"(?<currentValue>\\S+)\""
