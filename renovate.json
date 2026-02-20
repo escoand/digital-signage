@@ -4,13 +4,18 @@
     "config:js-app",
     "group:allNonMajor"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^\\.babelrc\\.json$"],
-      "matchStrings": ["\"corejs\":\\s*\\{[^}]*}"],
-      "depNameTemplate": "core-js",
-      "depTypeTemplate": "dependencies",
-      "datasourceTemplate": "npm"
+      "customType": "regex",
+      "managerFilePatterns": [
+        "^\\.babelrc\\.json$"
+      ],
+      "matchStrings": [
+        "\"corejs\":\\s*\"(?<currentValue>\\S+)\""
+      ],
+      "packageNameTemplate": "core-js",
+      "datasourceTemplate": "npm",
+      "versioningTemplate": "npm"
     }
   ]
 }
