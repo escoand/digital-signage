@@ -3,5 +3,14 @@
   "extends": [
     "config:js-app",
     "group:allNonMajor"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^\\.babelrc\\.json$"],
+      "matchStrings": ["\"corejs\":\\s*\\{[^}]*}"],
+      "depNameTemplate": "core-js",
+      "depTypeTemplate": "dependencies",
+      "datasourceTemplate": "npm"
+    }
   ]
 }
